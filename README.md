@@ -78,5 +78,18 @@ livenessProbe:
 
 ### Задание №8 (Задание с **)
 - манифесты в ./canary
+</details>
 
+> _kubernetes-networks
+<details>
+  <summary> ДЗ №4: Volumes, Storages,StatefulSet</summary>
+  
+### Задание №1
+- применен minio-statefulset.yaml
+- применен minio-headlessservice.yaml
+
+### Задание №2
+- создан и применен манифест секретов (base64 кодировка) secrets-minio.yaml
+- minio-statefulset.yaml настроен на использование секретов
+</details>
 
