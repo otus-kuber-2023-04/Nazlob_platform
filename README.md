@@ -93,3 +93,24 @@ livenessProbe:
 - minio-statefulset.yaml настроен на использование секретов
 </details>
 
+> _kubernetes-security
+<details>
+  <summary> ДЗ №5: Security</summary>
+  
+### Задание №1
+- создан и применен манифест для sa bob с привязкой роли admin для всего кластера: 01_sa-bob-cluster-admin.yaml
+- создан и применен манифест для sa dave: 02_sa-dave-na.yaml
+
+### Задание №2
+- создан и применен манифест для создания ns prometheus: 01_ns-prometheus.yaml
+- создан и применен манифест для создания sa carol в ns prometheus: 02_sa-carol.yaml
+- создан и применен манифест для  возможности всем Service Account в Namespace prometheus делать get , list , watch в отношении Pods всего кластера: 03_cr-bindings.yaml
+
+### Задание №3
+- создан и применен манифест для создания ns dev: 01_ns-dev.yaml
+- создан и применен манифест для создания sa jane в ns dev: 02_sa-jane.yaml
+- создан и применен манифест для sa jane с привязкой роли admin в рамках Namespace dev: 03_sa-jane-admin-role.yaml
+- создан и применен манифест для создания sa ken в ns dev: 04_sa-ken.yaml
+- создан и применен манифест для sa ken с привязкой роли view в рамках Namespace dev: 05_sa-ken-view-role.yaml
+
+</details>
