@@ -125,6 +125,6 @@ livenessProbe:
 - создан и задеплоен манифест deployments для nginx и nginx-exporter
 - создан и задеплоен манифест service для nginx и nginx-export
 - создан и задеплоен манифест ServiceMonitor prometheus для получения метрик с nginx-exporter
-- зашли в грфану - настроили дашборд с графиками для nginx
+- зашли в грфану - настроили дашборд с графиками для nginx (grafana.png)
 </details>
 
