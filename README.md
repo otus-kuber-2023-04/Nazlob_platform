@@ -114,3 +114,17 @@ livenessProbe:
 - создан и применен манифест для sa ken с привязкой роли view в рамках Namespace dev: 05_sa-ken-view-role.yaml
 
 </details>
+
+> _kubernetes-monitoring
+<details>
+  <summary> ДЗ №6: Monitoring</summary>
+### Задание
+- развернут клстер KIND
+- развернут helm chart prometheus: helm install kind-prometheus prometheus-community/kube-prometheus-stack
+- создан и запушен образ nginx с конфигом метрик
+- создан и задеплоен манифест deployments для nginx и nginx-exporter
+- создан и задеплоен манифест service для nginx и nginx-export
+- создан и задеплоен манифест ServiceMonitor prometheus для получения метрик с nginx-exporter
+- зашли в грфану - настроили дашборд с графиками для nginx
+</details>
+
