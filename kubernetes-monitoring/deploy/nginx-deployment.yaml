@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-status
+  labels:
+    app: nginx-status
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-status
+  template:
+    metadata:
+      labels:
+        app: nginx-status
+    spec:
+      containers:
+        - name: nginx
+          image: nazlo20/nginx-status
+          ports:
+            - containerPort: 80
+        - name: nginx-exporter
+          image: 'nginx/nginx-prometheus-exporter:0.11.0'
+          args:
+            - '-nginx.scrape-uri=http://localhost:8080/basic_status'
+          ports:
+            - containerPort: 9113
