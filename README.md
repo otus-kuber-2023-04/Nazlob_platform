@@ -153,3 +153,18 @@ livenessProbe:
 ` |  2 | some data-2 |`
 ` +----+-------------+`
 </details>
+
+> _kubernetes-templating
+<details>
+  <summary> ДЗ №8: Operators</summary><details>
+### Задание
+- cоздан кластер в yc
+- настроен helm3
+- настроен nginx-ingress
+- настроен cert-manager
+- установлен chartmuseum
+- установлен harbor
+- cоздан helm chartchart - hipster-shop и frontend
+- созданы манифесты services.jsonnet
+- настроен kustomize сервис
+</details>
