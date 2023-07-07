@@ -44,7 +44,7 @@
 
 </details>
 
-> _kubernetes-networks
+> _kubernetes-networks_
 <details>
   <summary> ДЗ №3: Настройка сетевой связности для приложения. Добавление service, ingress. Установка MetalLB</summary>
 
@@ -89,7 +89,7 @@ livenessProbe:
 - манифесты в ./canary
 </details>
 
-> _kubernetes-networks
+> _kubernetes-networks_
 <details>
   <summary> ДЗ №4: Volumes, Storages,StatefulSet</summary>
   
@@ -102,7 +102,7 @@ livenessProbe:
 - minio-statefulset.yaml настроен на использование секретов
 </details>
 
-> _kubernetes-security
+> _kubernetes-security_
 <details>
   <summary> ДЗ №5: Security</summary>
   
@@ -124,7 +124,7 @@ livenessProbe:
 
 </details>
 
-> _kubernetes-monitoring
+> _kubernetes-monitoring_
 <details>
   <summary> ДЗ №6: Monitoring</summary>
   
@@ -138,7 +138,7 @@ livenessProbe:
 - зашли в грфану - настроили дашборд с графиками для nginx (grafana.png)
 </details>
 
-> _kubernetes-operators
+> _kubernetes-operators_
 <details>
   <summary> ДЗ №7: Operators</summary>
   
@@ -166,9 +166,9 @@ livenessProbe:
 ```
 </details>
 
-> _kubernetes-templating
+> _kubernetes-templating_
 <details>
-  <summary> ДЗ №8: Operators</summary>
+  <summary> ДЗ №8: Templating</summary>
   
 ### Задание
 - cоздан кластер в yc
