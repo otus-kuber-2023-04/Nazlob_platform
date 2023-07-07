@@ -21,35 +21,44 @@
 > _kubernetes-controllers_
 <details>
   <summary>ДЗ №2: Kubernetes controllers.ReplicaSet, Deployment,DaemonSet</summary>
+  
 ### Задание 1
 - применен манифест replicaset для frontend, отсутствовал раздел selector, манифест дополнен
+
 ### Задание 2
 - изменен образ приложения в манифесте.
 - приминен обновленный манифест.
 - Вопрос: почему поды не пересоздались? Ответ: потому что replicaset следит только за количеством запущенных подов.
+
 ### Задание 3
 - создан и применен манифест для replicaset и deployments микросервиса paymentService
+
 ### Задание 4 (Задание со *)
 - созданы два манифеста blue-green и Reverse Rolling Update
+
 ### Задание 5
 - создан манифест deployment для frontend с пробами
+
 ### Задача 6 (Задание со **)
-- создан манифест DaemonSet для node-exporter, доплнен условием для развертывания на master нодах
+- создан манифест DaemonSet для node-exporter, доплнен условием для развертывания на master нода
+
 </details>
 
 > _kubernetes-networks
 <details>
   <summary> ДЗ №3: Настройка сетевой связности для приложения. Добавление service, ingress. Установка MetalLB</summary>
+
 ### Задание №1
 - настроен и применен web-pod.yaml
 - вопрос: Почему следующая конфигурация валидна, но не имеет смысла?
-~~~yaml
+```yaml
 livenessProbe:
   exec:
     command:
       - 'sh'
       - '-c'
       - 'ps aux | grep my_web_server_process'
+```
 - Ответ: всегда возвращает 0, так как в выводе всегда есть сам grep. Можно поправить, добавив grep в исключения: | grep -v grep
 
 ### Задание №2
@@ -118,6 +127,7 @@ livenessProbe:
 > _kubernetes-monitoring
 <details>
   <summary> ДЗ №6: Monitoring</summary>
+  
 ### Задание
 - развернут клстер KIND
 - развернут helm chart prometheus: helm install kind-prometheus prometheus-community/kube-prometheus-stack
@@ -131,13 +141,14 @@ livenessProbe:
 > _kubernetes-operators
 <details>
   <summary> ДЗ №7: Operators</summary>
+  
 ### Задание
 - создан CustomResource и CustomResourceDefinition
 - создана логика для mysql оператора, собран образ оператора
 - созданы и применены service-account.yml role.yml role-binding.yml deploy-operator.yml
 - проведены проверки работы
 - Вывод команд:
-...
+```shell
  `kubectl get jobs.batch`
 ` NAME                         COMPLETIONS   DURATION   AGE`
 ` backup-mysql-instance-job    1/1           5s         2m13s`
@@ -152,11 +163,13 @@ livenessProbe:
 ` |  1 | some data   |`
 ` |  2 | some data-2 |`
 ` +----+-------------+`
+```
 </details>
 
 > _kubernetes-templating
 <details>
-  <summary> ДЗ №8: Operators</summary><details>
+  <summary> ДЗ №8: Operators</summary>
+  
 ### Задание
 - cоздан кластер в yc
 - настроен helm3
